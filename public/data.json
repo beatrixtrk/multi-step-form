@@ -1,0 +1,97 @@
+{
+    "info": [
+        {
+            "step_title": "Your info",
+            "title": "Personal info",
+            "description": "Please provide your name, email address, and phone number."
+        }
+    ],
+    "plan": [
+        {
+            "step_title": "Select plan",
+            "title": "Select yout plan",
+            "description": "You have the option of monthly or yearly billing.",
+            "monthly": [
+                {
+                    "title": "Arcade",
+                    "price": "9"
+                },
+                {
+                    "title": "Advanced",
+                    "price": "12"
+                },
+                {
+                    "title": "Pro",
+                    "price": "15"
+                }
+            ],
+            "yearly": [
+                {
+                    "title": "Arcade",
+                    "price": "90",
+                    "free": "2 months free"
+                },
+                {
+                    "title": "Advanced",
+                    "price": "120",
+                    "free": "2 months free"
+                },
+                {
+                    "title": "Pro",
+                    "price": "150",
+                    "free": "2 months free"
+                }
+            ]
+        }
+    ],
+    "addOns": [
+        {
+            "step_title": "Add-ons",
+            "title": "Pick add-ons",
+            "description": "Add-ons help enhance your gaming experience.",
+            "monthly": [
+                {
+                    "title": "Online service",
+                    "description": "Access to multiplayer games",
+                    "price": "1"
+                },
+                {
+                    "title": "Larger storage",
+                    "description": "Extra 1TB of cloud save",
+                    "price": "2"
+                },
+                {
+                    "title": "Customizable profile",
+                    "description": "Custom theme on your profile",
+                    "price": "2"
+                }
+            ],
+            "yearly": [
+                {
+                    "title": "Online service",
+                    "description": "Access to multiplayer games",
+                    "price": "10"
+                },
+                {
+                    "title": "Larger storage",
+                    "description": "Extra 1TB of cloud save",
+                    "price": "20"
+                },
+                {
+                    "title": "Customizable profile",
+                    "description": "Custom theme on your profile",
+                    "price": "20"
+                }
+            ]
+        }
+    ],
+    "summary": [
+        {
+            "step_title": "Summary",
+            "title": "Finishing up",
+            "description": "Double-check everything looks OK before confirming.",
+            "finish_title": "Thank you!",
+            "finish_description": "Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com."
+        }
+    ]
+}

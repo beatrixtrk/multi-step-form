@@ -2,32 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html,body{
+    @apply text-denim
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.h1{
+    @apply text-[24px] lg:text-[32px] leading-normal mb-[9px] lg:mb-[11px] font-bold
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.description{
+    @apply text-base leading-normal mb-[22px] lg:mb-[35px] text-gray
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+label{
+    @apply block mb-[3px] lg:mb-[8px] text-xs lg:text-sm
+}
+
+input{
+    @apply w-full pt-[11px] pb-[12px] px-[16px] lg:py-[15px] mb-4 lg:mb-6 border border-solid border-borderColor rounded lg:rounded-lg focus:border-purple outline-none
+}
+
+.prev-button{
+    @apply text-sm text-gray font-medium px-4 py-3 rounded-lg bg-white hover:bg-white hover:text-denim
+}
+
+.next-button{
+    @apply text-sm text-white font-medium px-4 py-3 rounded-lg bg-denim hover:bg-blue
+}
+
+.error-msg{
+    @apply block mb-[3px] lg:mb-[8px] text-xs lg:text-sm text-red font-bold
+}
+
+.customCheckbox{
+    @apply appearance-none  w-[20px] h-[20px] mr-6 mb-0 p-0 bg-white border border-borderColor focus:border-borderColor rounded-md 
+}
+
+.customCheckbox:checked {
+    @apply bg-purple border-purple
 }

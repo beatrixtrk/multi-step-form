@@ -24,19 +24,19 @@ const PersonalInfoForm = ({
 		//Perform validation before proceeding to the next step
 		const { name, email, phone } = personalFormData;
 		const newErrors = {};
-		// if (!name) {
-		// 	newErrors.name = 'Name is required';
-		// }
-		// if (!email) {
-		// 	newErrors.email = 'Email is required';
-		// } else if (!isValidEmail(email)) {
-		// 	newErrors.email = 'Invalid email format';
-		// }
-		// if (!phone) {
-		// 	newErrors.phone = 'Phone number is required';
-		// } else if (!isValidPhoneNumber(phone)) {
-		// 	newErrors.phone = 'Invalid phone number format';
-		// }
+		if (!name) {
+			newErrors.name = 'Name is required';
+		}
+		if (!email) {
+			newErrors.email = 'Email is required';
+		} else if (!isValidEmail(email)) {
+			newErrors.email = 'Invalid email format';
+		}
+		if (!phone) {
+			newErrors.phone = 'Phone number is required';
+		} else if (!isValidPhoneNumber(phone)) {
+			newErrors.phone = 'Invalid phone number format';
+		}
 
 		// If there are errors, set them and prevent moving to the next step
 		if (Object.keys(newErrors).length > 0) {

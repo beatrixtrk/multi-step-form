@@ -6,6 +6,7 @@ const AddOnsForm = ({
 	prevStep,
 	nextStep,
 	billingPeriod,
+	setBillingPeriod,
 }) => {
 	const [checkedStates, setCheckedStates] = useState({});
 	const [addOnsData, setAddOnsData] = useState([]);
@@ -61,6 +62,7 @@ const AddOnsForm = ({
 	};
 
 	const handlePrev = () => {
+		setBillingPeriod(false);
 		prevStep();
 	};
 

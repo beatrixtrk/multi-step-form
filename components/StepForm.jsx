@@ -71,6 +71,7 @@ const StepForm = ({ setCurrentStep }) => {
 					prevStep={prevStep}
 					nextStep={nextStep}
 					billingPeriod={billingPeriod}
+					setBillingPeriod={setBillingPeriod}
 				/>
 			)}
 			{step === 4 && (

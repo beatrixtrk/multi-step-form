@@ -2,7 +2,7 @@ import React from 'react';
 
 const SwitchInput = ({ id, labelBefore, labelAfter, checked, onChange }) => {
 	return (
-		<div className="flex items-center justify-center rounded-lg bg-lightGray pt-3 px-4 pb-4 w-full mb-10">
+		<div className="flex items-center justify-center rounded-lg bg-lightGray pt-3 px-4 pb-4 w-full md:mb-10">
 			<label
 				htmlFor={id}
 				className="flex items-center justify-around mb-0"

@@ -42,8 +42,12 @@ const StepForm = ({ setCurrentStep }) => {
 		nextStep();
 	};
 
+	const changePlan = () => {
+		setStep(2);
+	};
+
 	return (
-		<>
+		<div className="px-6 py-8 bg-white rounded-[10px] md:p-0 h-full shadow-stepForm md:shadow-none">
 			{step === 1 && (
 				<PersonalInfoForm
 					personalFormData={personalFormData}
@@ -74,13 +78,16 @@ const StepForm = ({ setCurrentStep }) => {
 					personalFormData={personalFormData}
 					planFormData={planFormData}
 					addOnFormData={addOnFormData}
+					setPlanFormData={setPlanFormData}
+					setAddOnFormData={setAddOnFormData}
 					billingPeriod={billingPeriod}
 					prevStep={prevStep}
 					submitForm={submitForm}
+					changePlan={changePlan}
 				/>
 			)}
 			{step === 5 && <Final />}
-		</>
+		</div>
 	);
 };
 

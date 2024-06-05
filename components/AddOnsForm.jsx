@@ -8,7 +8,7 @@ const AddOnsForm = ({
 	billingPeriod,
 }) => {
 	const [checkedStates, setCheckedStates] = useState({});
-	const [addOnsData, setAddOnsData] = useState({});
+	const [addOnsData, setAddOnsData] = useState([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -21,24 +21,37 @@ const AddOnsForm = ({
 
 	const handleCheckbox = (e) => {
 		const { name, checked } = e.target;
-		const { price } = e.target.dataset;
+		const { price, period } = e.target.dataset;
 
-		setCheckedStates((prevState) => ({
-			...prevState,
+		setCheckedStates((prevCheckedStates) => ({
+			...prevCheckedStates,
 			[name]: checked,
 		}));
 
-		setAddOnFormData((prevData) => {
-			const newData = { ...prevData };
+		updateAddOnFormData(name, checked, price, period);
+	};
+
+	const updateAddOnFormData = (name, checked, price, period) => {
+		setAddOnFormData((prevAddOnFormData) => {
+			const newData = Array.isArray(prevAddOnFormData)
+				? [...prevAddOnFormData]
+				: [];
+
 			if (checked) {
-				newData[name] = {
+				// If the checkbox is checked, add the add-on to the data
+				newData.push({
 					name,
 					price: parseFloat(price),
-					period: e.target.dataset.period,
-				};
+					period,
+				});
 			} else {
-				delete newData[name];
+				// If the checkbox is unchecked, filter out the add-on with the specified name
+				const filteredData = newData.filter(
+					(addon) => addon.name !== name
+				);
+				return filteredData;
 			}
+
 			return newData;
 		});
 	};
@@ -117,14 +130,31 @@ const AddOnsForm = ({
 	};
 
 	return (
-		<div>
-			<h1 className="h1">Pick Add-ons</h1>
-			<p className="description">
-				Add-ons help enhance your gaming experience.
-			</p>
-			{renderAddOns(addOnsData?.addOns)}
-
-			<div className="flex items-center justify-between">
+		<div className="flex flex-col justify-between h-full">
+			<div>
+				<h1 className="h1">Pick Add-ons</h1>
+				<p className="description">
+					Add-ons help enhance your gaming experience.
+				</p>
+				<div>{renderAddOns(addOnsData?.addOns)}</div>
+			</div>
+			<div className="hidden md:flex items-center justify-between">
+				<button
+					className="prev-button"
+					onClick={handlePrev}
+					type="button"
+				>
+					Go back
+				</button>
+				<button
+					className="next-button"
+					onClick={handleNext}
+					type="button"
+				>
+					Next Step
+				</button>
+			</div>
+			<div className="fixed bottom-0 w-full bg-white -ml-10 p-4 flex items-center justify-between shadow-buttonBar md:hidden">
 				<button
 					className="prev-button"
 					onClick={handlePrev}

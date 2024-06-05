@@ -21,9 +21,9 @@ const PersonalInfoForm = ({
 	};
 
 	const handleNext = () => {
-		// Perform validation before proceeding to the next step
-		// const { name, email, phone } = personalFormData;
-		// const newErrors = {};
+		//Perform validation before proceeding to the next step
+		const { name, email, phone } = personalFormData;
+		const newErrors = {};
 		// if (!name) {
 		// 	newErrors.name = 'Name is required';
 		// }
@@ -38,13 +38,12 @@ const PersonalInfoForm = ({
 		// 	newErrors.phone = 'Invalid phone number format';
 		// }
 
-		// // If there are errors, set them and prevent moving to the next step
-		// if (Object.keys(newErrors).length > 0) {
-		// 	setErrors(newErrors);
-		// } else {
-		// 	nextStep();
-		// }
-		nextStep();
+		// If there are errors, set them and prevent moving to the next step
+		if (Object.keys(newErrors).length > 0) {
+			setErrors(newErrors);
+		} else {
+			nextStep();
+		}
 	};
 
 	// Function to validate email format
@@ -118,7 +117,16 @@ const PersonalInfoForm = ({
 					/>
 				</div>
 			</div>
-			<div className="flex items-center justify-end">
+			<div className="hidden md:flex items-center justify-end">
+				<button
+					className="next-button"
+					onClick={handleNext}
+					type="button"
+				>
+					Next Step
+				</button>
+			</div>
+			<div className="fixed bottom-0 w-full bg-white -ml-10 p-4 text-right md:hidden shadow-buttonBar">
 				<button
 					className="next-button"
 					onClick={handleNext}

@@ -2,13 +2,13 @@ import React from 'react';
 
 const Final = () => {
 	return (
-		<div>
+		<div className="flex items-center justify-center h-full">
 			<div className="flex items-center justify-center">
 				<img src="" alt="" />
 			</div>
 			<div className="text-center">
 				<img
-					className="m-auto mb-8"
+					className="m-auto mb-6 md:mb-8"
 					src="/thankyou.svg"
 					alt="Thank you"
 				/>

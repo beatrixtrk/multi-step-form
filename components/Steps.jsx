@@ -1,6 +1,6 @@
 const Steps = ({ steps, currentStep }) => {
 	return (
-		<ul>
+		<ul className="relative z-[1] flex justify-center gap-4 md:block">
 			{steps.slice(0, 4).map((step, index) => (
 				<li
 					key={index}
@@ -15,7 +15,7 @@ const Steps = ({ steps, currentStep }) => {
 					>
 						{step.number}
 					</div>
-					<div>
+					<div className="hidden md:block">
 						<p className="text-xs text-lightBlue mb-1">
 							Step {step.number}
 						</p>

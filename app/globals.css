@@ -30,6 +30,10 @@ input{
     @apply text-sm text-white font-medium px-4 py-3 rounded-lg bg-denim hover:bg-blue
 }
 
+.confirm-button{
+    @apply text-sm text-white font-medium px-4 py-3 rounded-lg bg-purple hover:bg-lightPurple
+}
+
 .error-msg{
     @apply block mb-[3px] lg:mb-[8px] text-xs lg:text-sm text-red font-bold
 }

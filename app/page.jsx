@@ -28,10 +28,10 @@ export default function Home() {
 	];
 	const [currentStep, setCurrentStep] = useState(1);
 	return (
-		<main className="min-h-screen h-full flex items-center justify-center">
+		<main className="min-h-screen h-full md:flex items-center justify-center">
 			<div className="container mx-auto flex items-center justify-center">
-				<div className="main-container bg-white p-4 rounded-[15px] flex lg:h-[600px] lg:max-w-[940px] w-full">
-					<div className="relative overflow-hidden bg-purple px-8 py-10 rounded-[15px] w-full max-w-[275px]">
+				<div className="main-container md:bg-white md:p-4 rounded-[15px] md:flex h-full md:h-[600px] w-full lg:w-[940px]">
+					<div className="relative overflow-hidden bg-purple w-full h-[168px] md:h-full px-8 py-10 md:rounded-[15px] md:max-w-[275px]">
 						<Steps steps={steps} currentStep={currentStep} />
 						<svg
 							className="absolute left-0 bottom-0"
@@ -49,7 +49,7 @@ export default function Home() {
 							/>
 						</svg>
 						<svg
-							className="absolute right-0 bottom-0"
+							className="absolute right-0 -bottom-8 md:bottom-0"
 							width="180"
 							height="145"
 							viewBox="0 0 180 145"
@@ -64,7 +64,7 @@ export default function Home() {
 							/>
 						</svg>
 						<svg
-							className="absolute bottom-4 left-0"
+							className="absolute -bottom-4 -left-2 md:bottom-4 md:left-0"
 							width="68"
 							height="135"
 							viewBox="0 0 68 135"
@@ -77,7 +77,7 @@ export default function Home() {
 							/>
 						</svg>
 						<svg
-							className="absolute bottom-14 right-14"
+							className="absolute bottom-8 right-24 md:bottom-14 md:right-14"
 							width="50"
 							height="52"
 							viewBox="0 0 50 52"
@@ -107,7 +107,7 @@ export default function Home() {
 							/>
 						</svg>
 					</div>
-					<div className="px-6 py-8 lg:px-[80px] lg:py-10 w-full h-full">
+					<div className="relative w-full h-full -mt-20 p-4 mb-24 md:mt-0 md:mb-0 md:px-6 md:py-8 lg:px-[80px] lg:py-10">
 						<StepForm
 							currentStep={currentStep}
 							setCurrentStep={setCurrentStep}

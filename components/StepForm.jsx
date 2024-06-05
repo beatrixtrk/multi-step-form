@@ -82,6 +82,7 @@ const StepForm = ({ setCurrentStep }) => {
 					setPlanFormData={setPlanFormData}
 					setAddOnFormData={setAddOnFormData}
 					billingPeriod={billingPeriod}
+					setBillingPeriod={setBillingPeriod}
 					prevStep={prevStep}
 					submitForm={submitForm}
 					changePlan={changePlan}

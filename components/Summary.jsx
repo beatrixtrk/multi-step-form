@@ -7,6 +7,7 @@ const Summary = ({
 	addOnFormData,
 	setAddOnFormData,
 	billingPeriod,
+	setBillingPeriod,
 	prevStep,
 	changePlan,
 	submitForm,
@@ -34,6 +35,7 @@ const Summary = ({
 		changePlan();
 		setAddOnFormData({});
 		setPlanFormData({});
+		setBillingPeriod(false);
 	};
 
 	return (

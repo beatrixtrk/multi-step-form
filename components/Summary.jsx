@@ -29,6 +29,7 @@ const Summary = ({
 
 	const handlePrev = () => {
 		prevStep();
+		setAddOnFormData({});
 	};
 
 	const handlePlan = () => {
@@ -63,7 +64,7 @@ const Summary = ({
 								</span>
 							</p>
 							<p className="text-denim text-sm font-bold md:text-base">
-								+${planFormData.selectedPlanOption.price}/
+								${planFormData.selectedPlanOption.price}/
 								{billingPeriod ? 'yr' : 'mo'}
 							</p>
 						</div>
@@ -94,7 +95,7 @@ const Summary = ({
 							Total {'('}per {billingPeriod ? 'year)' : 'month)'}
 						</p>
 						<p className="text-purple text-base md:text-xl font-bold">
-							+${totalPrice}/{billingPeriod ? 'yr' : 'mo'}
+							${totalPrice}/{billingPeriod ? 'yr' : 'mo'}
 						</p>
 					</div>
 				</div>
